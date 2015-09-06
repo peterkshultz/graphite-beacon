@@ -26,7 +26,7 @@ class GraphiteRecord(object):
         
     @property
     def moving_average(self):
-        return self.sum / self.values[-10:]
+        return self.sum / sum(self.values[-10:])
 
     @property
     def last_value(self):
